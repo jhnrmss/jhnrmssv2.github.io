@@ -6,8 +6,8 @@ const AppLayout = () => {
       <header>
         <NavigationBar />
       </header>
-      <main className="container mx-auto sm:px-6 lg:px-8">
-        <h1 className="font-bold">Hello World!</h1>
+      <main className="container max-w-7xl px-2 sm:px-6 lg:px-8">
+        <h1 className="font-bold text-primary">Hello World!</h1>
       </main>
     </>
   );

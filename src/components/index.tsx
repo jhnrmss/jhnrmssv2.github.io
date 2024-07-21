@@ -19,3 +19,15 @@ export {
   CardDescription,
   CardContent,
 } from "./Card";
+export {
+  Sheet,
+  SheetPortal,
+  SheetOverlay,
+  SheetTrigger,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetFooter,
+  SheetTitle,
+  SheetDescription,
+} from "./Sheet";

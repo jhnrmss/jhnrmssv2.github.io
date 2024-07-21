@@ -17,16 +17,15 @@ module.exports = {
         "2xl": "1400px",
       },
     },
-    // colors: {
-    //   primary: "#4d7111",
-    //   secondary: "#91eaaf",
-    //   "primary-white": " #f4fffc",
-    //   accent: " #c3e956",
-    //   destructive: " #dc2626",
-    //   "app-shadow": " #1f4b2c",
-    // },
-
     extend: {
+      colors: {
+        primary: "#4d7111",
+        secondary: "#91eaaf",
+        "primary-white": " #f4fffc",
+        accent: " #c3e956",
+        destructive: " #dc2626",
+        "app-shadow": " #1f4b2c",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
