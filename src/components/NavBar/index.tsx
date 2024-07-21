@@ -1,8 +1,4 @@
-import {
-  ArrowUpRightIcon,
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { GoArrowUpRight } from "react-icons/go";
 import { Button } from "../Button";
 import {
   Sheet,
@@ -11,6 +7,7 @@ import {
   SheetHeader,
   SheetTitle,
 } from "../Sheet";
+import { FaBarsStaggered, FaXmark } from "react-icons/fa6";
 
 const NavigationBar = () => {
   return (
@@ -21,11 +18,11 @@ const NavigationBar = () => {
             {/* Mobile menu button */}
 
             <SheetTrigger className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-slate-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">
-              <Bars3Icon
+              <FaBarsStaggered
                 aria-hidden="true"
                 className="block h-6 w-6 group-data-[open]:hidden"
               />
-              <XMarkIcon
+              <FaXmark
                 aria-hidden="true"
                 className="hidden h-6 w-6 group-data-[open]:block"
               />
@@ -43,7 +40,7 @@ const NavigationBar = () => {
               <div className="px-10 sm:border sm:flex sm:border-slate-100 sm:shadow-md sm:rounded-full sm:space-x-8 ">
                 <a
                   href="#"
-                  className="inline-flex items-center text-sm font-medium text-gray-900"
+                  className="inline-flex items-center text-sm font-medium text-slate-600"
                 >
                   Home
                 </a>
@@ -52,7 +49,7 @@ const NavigationBar = () => {
             <div className="hidden sm:mt-2 sm:ml-6 sm:flex sm:justify-center sm:items-center sm:space-x-8 ">
               <Button variant={"outline"} className="space-x-2">
                 <p>Contact</p>
-                <ArrowUpRightIcon className="h-4 w-auto" />
+                <GoArrowUpRight className="h-4 w-auto" />
               </Button>
             </div>
             {/* <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
