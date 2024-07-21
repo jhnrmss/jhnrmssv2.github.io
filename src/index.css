@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  background-color: #f4fffc;
+  box-sizing: border-box;
+}
+
+@layer base {
+  :root {
+    --primary: #4d7111;
+    --secondary: #91eaaf;
+    --primary-white: #f4fffc;
+    --accent: #c3e956;
+    --destructive: #dc2626;
+    --app-shadow: #1f4b2c;
+  }
+}
