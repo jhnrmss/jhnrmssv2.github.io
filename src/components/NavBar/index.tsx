@@ -40,16 +40,19 @@ const NavigationBar = () => {
               <div className="px-10 sm:border sm:flex sm:border-slate-100 sm:shadow-md sm:rounded-full sm:space-x-8 ">
                 <a
                   href="#"
-                  className="inline-flex items-center text-sm font-medium text-slate-600"
+                  className="inline-flex items-center text-sm font-medium text-primary"
                 >
                   Home
                 </a>
               </div>
             </div>
             <div className="hidden sm:mt-2 sm:ml-6 sm:flex sm:justify-center sm:items-center sm:space-x-8 ">
-              <Button variant={"outline"} className="space-x-2">
+              <Button
+                variant={"outline"}
+                className="space-x-1  hover:text-white"
+              >
                 <p>Contact</p>
-                <GoArrowUpRight className="h-4 w-auto" />
+                <GoArrowUpRight className="h-4 mt-0.5 w-auto " />
               </Button>
             </div>
             {/* <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">

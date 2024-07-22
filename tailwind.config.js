@@ -19,11 +19,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#4d7111",
-        secondary: "#91eaaf",
-        "primary-white": " #f4fffc",
+        primary: "#3d5a80",
+        secondary: "#98c1d9",
+        "primary-white": " #e0fbfc",
         accent: " #c3e956",
-        destructive: " #dc2626",
+        danger: " #ee6c4d",
         "app-shadow": " #1f4b2c",
       },
       keyframes: {
