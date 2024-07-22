@@ -12,15 +12,12 @@ const Footer = () => {
               className="text-gray-400 hover:text-gray-500"
             >
               <span className="sr-only">{item.name}</span>
-              <item.icon
-                aria-hidden="true"
-                className="h-6 w-6 text-slate-600"
-              />
+              <item.icon aria-hidden="true" className="h-6 w-6 text-primary" />
             </a>
           ))}
         </div>
         <div className="mt-8 md:order-1 md:mt-0">
-          <p className="text-center text-xs leading-5 text-gray-600">
+          <p className="text-center text-xs leading-5 text-primary">
             &copy; 2024 John Romie Reyes. All rights reserved.
           </p>
         </div>

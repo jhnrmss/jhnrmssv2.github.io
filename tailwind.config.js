@@ -22,9 +22,8 @@ module.exports = {
         primary: "#3d5a80",
         secondary: "#98c1d9",
         "primary-white": " #e0fbfc",
-        accent: " #c3e956",
         danger: " #ee6c4d",
-        "app-shadow": " #1f4b2c",
+        "default-text": "#334155",
       },
       keyframes: {
         "accordion-down": {

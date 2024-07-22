@@ -9,10 +9,38 @@ import {
 } from "../Sheet";
 import { FaBarsStaggered, FaXmark } from "react-icons/fa6";
 
+const navigation = [
+  {
+    name: "Home",
+    href: "#home",
+    icon: "",
+  },
+  {
+    name: "About",
+    href: "#about",
+    icon: "",
+  },
+  {
+    name: "Services",
+    href: "#services",
+    icon: "",
+  },
+  {
+    name: "Projects",
+    href: "#projects",
+    icon: "",
+  },
+  {
+    name: "Contact",
+    href: "#contact",
+    icon: "",
+  },
+];
+
 const NavigationBar = () => {
   return (
     <Sheet>
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div className="mx-auto mt-4 max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button */}
@@ -36,14 +64,17 @@ const NavigationBar = () => {
                 className="h-5 w-auto"
               />
             </div>
-            <div className="hidden sm:flex p-2 px-10 sm:mt-2">
+            <div className="hidden sm:flex p-1 px-10 sm:mt-2">
               <div className="px-10 sm:border sm:flex sm:border-slate-100 sm:shadow-md sm:rounded-full sm:space-x-8 ">
-                <a
-                  href="#"
-                  className="inline-flex items-center text-sm font-medium text-primary"
-                >
-                  Home
-                </a>
+                {navigation.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.href}
+                    className="inline-flex items-center text-sm font-medium text-default-text"
+                  >
+                    {link.name}
+                  </a>
+                ))}
               </div>
             </div>
             <div className="hidden sm:mt-2 sm:ml-6 sm:flex sm:justify-center sm:items-center sm:space-x-8 ">
@@ -86,12 +117,15 @@ const NavigationBar = () => {
           </SheetTitle>
         </SheetHeader>
         <div className="flex flex-col justify-center items-center m-10">
-          <a
-            href="#"
-            className="inline-flex items-center text-sm font-medium text-gray-900"
-          >
-            Home
-          </a>
+          {navigation.map((link, index) => (
+            <a
+              key={index}
+              href={link.href}
+              className="inline-flex items-center text-sm font-medium text-gray-900"
+            >
+              {link.name}
+            </a>
+          ))}
         </div>
       </SheetContent>
     </Sheet>
