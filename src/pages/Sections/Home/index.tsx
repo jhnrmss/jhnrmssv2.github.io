@@ -6,7 +6,7 @@ export function Home() {
   return (
     <section id="home">
       <div className="bg-white">
-        <div className="relative isolate">
+        <div className="relative isolate pt-14 ">
           <div className="mx-auto max-w-2xl py-6 sm:py-10 lg:py-12">
             <div className="mb-2 flex justify-center">
               <div className="flex flex-col justify-center items-center px-3 space-y-3 text-gray-600">

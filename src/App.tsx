@@ -1,4 +1,4 @@
-import AppLayout from "./components/Layout";
+import AppLayout from "./pages/Layout";
 
 function App() {
   return (

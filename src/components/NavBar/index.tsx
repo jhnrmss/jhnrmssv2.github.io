@@ -6,6 +6,7 @@ import {
   SheetContent,
   SheetHeader,
   SheetTitle,
+  SheetDescription,
 } from "../Sheet";
 import { FaBarsStaggered, FaXmark } from "react-icons/fa6";
 
@@ -40,7 +41,7 @@ const navigation = [
 const NavigationBar = () => {
   return (
     <Sheet>
-      <div className="mx-auto mt-4 max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex h-16 justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button */}
@@ -115,8 +116,9 @@ const NavigationBar = () => {
               className="h-5 w-auto"
             />
           </SheetTitle>
+          <SheetDescription className="sr-only">Main Logo</SheetDescription>
         </SheetHeader>
-        <div className="flex flex-col justify-center items-center m-10">
+        <div className="flex flex-col justify-center space-y-4 items-center m-10">
           {navigation.map((link, index) => (
             <a
               key={index}
