@@ -7,10 +7,10 @@ export function About() {
         <div className="relative isolate py-14 ">
           <div className="mx-auto max-w-2xl space-y-12 py-6 sm:py-10 lg:py-12">
             <div className="text-center ">
-              <h1 className=" font-bold  text-default-text sm:text-4xl">
+              <h2 className=" font-bold  text-default-text sm:text-4xl">
                 About Me!
-              </h1>
-              <h2 className="text-default-text text-base">Introduction</h2>
+              </h2>
+              <h4 className="text-default-text text-base">Introduction</h4>
             </div>
             <div className=" flex flex-col space-y-4 ">
               <p className="text-base  text-gray-600">

@@ -66,17 +66,16 @@ const NavigationBar = () => {
               />
             </div>
             <div className="hidden sm:flex p-1 px-10 sm:mt-2">
-              <div className="px-10 sm:border sm:flex sm:border-slate-100 sm:shadow-md sm:rounded-full sm:space-x-8 ">
+              <ul className="px-10 sm:border sm:flex sm:border-slate-100 sm:shadow-md sm:rounded-full sm:space-x-8 ">
+                {" "}
                 {navigation.map((link, index) => (
-                  <a
-                    key={index}
-                    href={link.href}
-                    className="inline-flex items-center text-sm font-medium text-default-text"
-                  >
-                    {link.name}
-                  </a>
+                  <li className="inline-flex items-center text-sm font-medium text-default-text">
+                    <a key={index} href={link.href}>
+                      {link.name}
+                    </a>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
             <div className="hidden sm:mt-2 sm:ml-6 sm:flex sm:justify-center sm:items-center sm:space-x-8 ">
               <Button
