@@ -5,7 +5,7 @@ import { Button } from "@/components";
 export function Home() {
   return (
     <section id="home">
-      <div className="bg-white">
+      <div>
         <div className="relative isolate pt-14 ">
           <div className="mx-auto max-w-2xl py-6 sm:py-10 lg:py-12">
             <div className="mb-2 flex justify-center">

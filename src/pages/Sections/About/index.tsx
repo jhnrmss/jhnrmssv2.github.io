@@ -104,7 +104,7 @@ const skillSets = [
 export function About() {
   return (
     <section id="about">
-      <div className="bg-white">
+      <div>
         <div className="relative isolate py-14 ">
           <div className="mx-auto max-w-2xl space-y-12 py-6 sm:py-10 lg:py-12">
             <div className="text-center ">
@@ -149,7 +149,7 @@ export function About() {
               {moreInfo.map((item, index) => (
                 <li
                   key={"info_item_" + index}
-                  className="border border-default-text/40 cursor-pointer rounded-md p-4 hover:-translate-y-1 hover:shadow-[4px_4px_0_#334155] duration-500 "
+                  className="border border-default-text/40 cursor-pointer rounded-md p-4 hover:-translate-y-1 hover:shadow-[4px_4px_0_#334155] duration-500 space-y-2"
                 >
                   <item.icon className="h-6 w-auto text-default-text" />
                   <h3 className="text-lg text-default-text font-medium">

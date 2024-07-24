@@ -41,7 +41,7 @@ const navigation = [
 const NavigationBar = () => {
   return (
     <Sheet>
-      <div className="container mx-auto px-4 pt-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 pt-4 sm:px-6 lg:px-8 ">
         <div className="relative flex h-16 justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             {/* Mobile menu button */}
@@ -66,7 +66,7 @@ const NavigationBar = () => {
               />
             </div>
             <div className="hidden sm:flex p-1 px-10 sm:mt-2">
-              <ul className="px-10 sm:border sm:flex sm:border-slate-100 sm:shadow-md sm:rounded-full sm:space-x-8 ">
+              <ul className="px-10  bg-white sm:border sm:flex sm:border-slate-100 sm:shadow-md sm:rounded-full sm:space-x-8 ">
                 {" "}
                 {navigation.map((link, index) => (
                   <li className="inline-flex items-center text-sm font-medium text-default-text">
