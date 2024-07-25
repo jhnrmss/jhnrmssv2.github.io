@@ -1,114 +1,15 @@
-import React from "react";
+import { moreInfo, skillSets } from "@/assets/constants";
 import meImage from "../../../assets/my-photo.jpg";
-import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
-import {
-  FaCode,
-  FaCss3Alt,
-  FaGitAlt,
-  FaGolang,
-  FaHtml5,
-  FaJira,
-  FaReact,
-  FaSourcetree,
-} from "react-icons/fa6";
-import { SiTailwindcss, SiRedux, SiReactquery, SiAxios } from "react-icons/si";
-import { TbBrandJavascript, TbGhost2 } from "react-icons/tb";
-
-const moreInfo = [
-  {
-    title: "Experience",
-    description: "2 years of experience at Hooli Software",
-    icon: FaBriefcase,
-  },
-  {
-    title: "Education",
-    description: "Bachelor of Science in Computer Science",
-    icon: FaGraduationCap,
-  },
-  {
-    title: "Projects",
-    description: "Been part of 7 projects in my previous role.",
-    icon: FaCode,
-  },
-];
-
-const skillSets = [
-  {
-    label: "HTML",
-    icon: FaHtml5,
-    iconStyle: "h-8 w-auto text-orange-400",
-  },
-  {
-    label: "CSS",
-    icon: FaCss3Alt,
-    iconStyle: "h-8 w-auto text-blue-400",
-  },
-  {
-    label: "JavaScript",
-    icon: TbBrandJavascript,
-    iconStyle: "h-8 w-auto text-yellow-400",
-  },
-  {
-    label: "ReactJS",
-    icon: FaReact,
-    iconStyle: "h-8 w-auto text-blue-400",
-  },
-
-  {
-    label: "Tailwind",
-    icon: SiTailwindcss,
-    iconStyle: "h-8 w-auto text-blue-400",
-  },
-  {
-    label: "ReduxJS",
-    icon: SiRedux,
-    iconStyle: "h-8 w-auto text-purple-400",
-  },
-  {
-    label: "Jotai",
-    icon: TbGhost2,
-    iconStyle: "h-8 w-auto text-blue-400",
-  },
-  {
-    label: "React Query",
-    icon: SiReactquery,
-    iconStyle: "h-8 w-auto text-blue-400",
-  },
-  {
-    label: "Golang",
-    icon: FaGolang,
-    iconStyle: "h-8 w-auto text-blue-400",
-  },
-  {
-    label: "Source Tree",
-    icon: FaSourcetree,
-    iconStyle: "h-8 w-auto text-blue-400",
-  },
-  {
-    label: "Jira",
-    icon: FaJira,
-    iconStyle: "h-8 w-auto text-blue-400",
-  },
-  {
-    label: "Git",
-    icon: FaGitAlt,
-    iconStyle: "h-8 w-auto text-orange-500",
-  },
-  {
-    label: "Axios",
-    icon: SiAxios,
-    iconStyle: "h-8 w-auto text-indigo-500",
-  },
-];
+import { Card, CardContent, CardHeader, CardTitle } from "@/components";
 
 export function About() {
   return (
     <section id="about">
       <div>
         <div className="relative isolate py-14 ">
-          <div className="mx-auto max-w-2xl space-y-12 py-6 sm:py-10 lg:py-12">
+          <div className="mx-auto max-w-2xl space-y-8 py-6 sm:py-10 lg:py-12">
             <div className="text-center ">
-              <h2 className=" font-bold  text-default-text sm:text-4xl">
+              <h2 className=" font-bold text-2xl text-default-text sm:text-4xl">
                 About Me!
               </h2>
               <h4 className="text-default-text text-base">Introduction</h4>
@@ -119,7 +20,7 @@ export function About() {
                 <img
                   src={meImage}
                   alt="My Photo"
-                  className="h-96 w-auto rounded-md  opacity-80 hover:bg-none hover:opacity-100 duration-500"
+                  className="h-96 w-auto rounded-lg  opacity-80 hover:bg-none hover:opacity-100 duration-500 shadow"
                 />
               </div>
               <div className="flex-1 space-y-4">
@@ -145,33 +46,42 @@ export function About() {
                 </p>
               </div>
             </div>
-            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {moreInfo.map((item, index) => (
-                <li
+                <Card
                   key={"info_item_" + index}
-                  className="border border-default-text/40 cursor-pointer rounded-md p-4 hover:-translate-y-1 hover:shadow-[4px_4px_0_#334155] duration-500 space-y-2"
+                  className="border border-default-text/30 cursor-pointer rounded-lg hover:-translate-y-1 hover:shadow-[4px_4px_0_#334155] duration-500 -space-y-4 shadow-none"
                 >
-                  <item.icon className="h-6 w-auto text-default-text" />
-                  <h3 className="text-lg text-default-text font-medium">
-                    {item.title}
-                  </h3>
-                  <p className="text-base text-default-text">
-                    {item.description}
-                  </p>
-                </li>
+                  <CardHeader>
+                    <CardTitle className="flex flex-col items-center px-4">
+                      <item.icon className=" h-6 w-auto text-default-text" />
+                      <h3 className="text-lg text-default-text font-medium">
+                        {item.title}
+                      </h3>
+                    </CardTitle>
+                  </CardHeader>
+
+                  <CardContent className="text-center px-4">
+                    <p className="text-base text-default-text">
+                      {item.description}
+                    </p>
+                  </CardContent>
+                </Card>
               ))}
-            </ul>
+            </div>
             <h4 className="text-base text-default-text">Tech stack I used:</h4>
-            <ul className="grid grid-cols-6 min-[320px]:grid-cols-3 sm:grid-cols-6 md:grid-cols-8 gap-4">
+            <div className="grid grid-cols-1 min-[280px]:grid-cols-2 min-[320px]:grid-cols-3 min-[420px]:grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-4">
               {skillSets.map((item, index) => (
-                <li
+                <Card
                   key={"info_item_" + index}
-                  className="flex justify-center border border-default-text/40 cursor-pointer rounded-md p-4 hover:-translate-y-1 hover:shadow-[4px_4px_0_#334155] duration-500 "
+                  className="shadow-none border border-default-text/30 cursor-pointer rounded-lg hover:-translate-y-1 hover:shadow-[4px_4px_0_#334155] duration-500"
                 >
-                  <item.icon className={item.iconStyle} />
-                </li>
+                  <CardContent className="flex justify-center p-4">
+                    <item.icon className={item.iconStyle} />
+                  </CardContent>
+                </Card>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </div>

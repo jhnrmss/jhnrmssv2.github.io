@@ -1,4 +1,5 @@
-import React from "react";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { AiOutlineDownload } from "react-icons/ai";
 import meImage from "../../../assets/me.jpg";
 import { Button } from "@/components";
 
@@ -31,9 +32,16 @@ export function Home() {
                 success of the overall product.
               </p>
               <div className="mt-6 flex items-center justify-center gap-x-6">
-                <Button className="text-white">Contact Me</Button>
-                <Button variant={"outline"} className="px-8">
-                  Resume
+                <Button className="inline-flex items-center space-x-1">
+                  <p> Contact Me</p>
+                  <IoIosArrowRoundForward className="h-6 w-auto" />
+                </Button>
+                <Button
+                  variant={"outline"}
+                  className="inline-flex items-center space-x-2 "
+                >
+                  <p>My Resume</p>
+                  <AiOutlineDownload className="h-4 w-auto" />
                 </Button>
               </div>
             </div>

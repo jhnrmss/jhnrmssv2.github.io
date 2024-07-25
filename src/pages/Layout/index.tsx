@@ -1,6 +1,6 @@
 import NavigationBar from "@/components/NavBar";
 import Footer from "../../components/Footer";
-import { About, Home } from "@/pages";
+import { About, Contact, Home, Projects } from "@/pages";
 
 const AppLayout = () => {
   return (
@@ -12,8 +12,9 @@ const AppLayout = () => {
       <main className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Home />
         <About />
+        <Projects />
+        <Contact />
       </main>
-
       <footer>
         <Footer />
       </footer>

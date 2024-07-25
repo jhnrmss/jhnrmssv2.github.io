@@ -22,11 +22,6 @@ const navigation = [
     icon: "",
   },
   {
-    name: "Services",
-    href: "#services",
-    icon: "",
-  },
-  {
     name: "Projects",
     href: "#projects",
     icon: "",
@@ -69,10 +64,11 @@ const NavigationBar = () => {
               <ul className="px-10  bg-white sm:border sm:flex sm:border-slate-100 sm:shadow-md sm:rounded-full sm:space-x-8 ">
                 {" "}
                 {navigation.map((link, index) => (
-                  <li className="inline-flex items-center text-sm font-medium text-default-text">
-                    <a key={index} href={link.href}>
-                      {link.name}
-                    </a>
+                  <li
+                    key={index}
+                    className="inline-flex items-center text-sm font-medium text-default-text"
+                  >
+                    <a href={link.href}>{link.name}</a>
                   </li>
                 ))}
               </ul>

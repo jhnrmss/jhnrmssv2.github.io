@@ -1,6 +1,6 @@
 import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
-export const navigation = [
+export const socials = [
   {
     name: "Facebook",
     href: "#",
