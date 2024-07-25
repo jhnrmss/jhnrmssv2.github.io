@@ -23,6 +23,10 @@ export function Projects() {
                 My latest work!
               </h2>
               <h4 className="text-default-text text-base">My Portfolio</h4>
+              <p className="mt-6 text-base leading-8 text-default-text">
+                Welcome to my web development portfolio! explore a collection of
+                projects showcasing my expertise in web development.
+              </p>
             </div>
             <Tabs
               defaultValue="account"

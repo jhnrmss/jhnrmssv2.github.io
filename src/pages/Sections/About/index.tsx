@@ -40,10 +40,6 @@ export function About() {
                   learn and grow. If you have a good opportunity that matches my
                   skills and experience then don&apos;t hesitate to contact me.
                 </p>
-                <p className="text-base  text-gray-600">
-                  Here are a few technologies I&apos;ve been working with
-                  recently:
-                </p>
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
