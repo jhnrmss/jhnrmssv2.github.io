@@ -52,7 +52,7 @@ const NavigationBar = () => {
               />
             </SheetTrigger>
           </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
+          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between mx-auto max-w-4xl">
             <div className="flex flex-shrink-0 items-center ">
               <img
                 alt="Application Main Logo"
