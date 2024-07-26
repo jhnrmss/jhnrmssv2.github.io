@@ -1,7 +1,31 @@
 import { Input, Button, Textarea } from "@/components";
+import { useRef } from "react";
 import { IoIosSend } from "react-icons/io";
-
+import emailjs from "@emailjs/browser";
+import { toast } from "react-hot-toast";
 export function Contact() {
+  const serviceId = import.meta.env.VITE_SERVICE_ID;
+  const templateId = import.meta.env.VITE_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+  const formElement = useRef<HTMLFormElement>(null);
+
+  const onSubmit = (e: React.FormEvent) => {
+    console.log(serviceId, templateId, publicKey);
+    e.preventDefault();
+    emailjs
+      .sendForm(serviceId, templateId, formElement.current as HTMLFormElement, {
+        publicKey: publicKey,
+      })
+      .then(
+        () => {
+          toast.success("Message sent!");
+        },
+        (error) => {
+          toast.error("Message not sent!");
+          console.log(error);
+        }
+      );
+  };
   return (
     <section id="contact">
       <div>
@@ -17,7 +41,7 @@ export function Contact() {
                 comments or feedback, please use the form below.
               </p>
             </div>
-            <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
+            <form ref={formElement} onSubmit={onSubmit} className="space-y-4">
               <div className="flex w-full gap-6">
                 <div className="basis-1/2 space-y-2">
                   <label htmlFor="#name" className="text-gray-700 font-medium">
