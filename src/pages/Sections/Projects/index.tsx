@@ -1,3 +1,4 @@
+import { projects } from "@/assets/constants";
 import {
   Button,
   Card,
@@ -56,23 +57,23 @@ export function Projects() {
               </TabsList>
             </Tabs>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-              {[1, 2, 3].map((item, index) => (
+              {projects.map((item, index) => (
                 <Card
                   key={item + " proj " + index}
                   className="p-5 space-y-3 border border-default-text/30 cursor-pointer rounded-lg hover:-translate-y-1 hover:shadow-[4px_4px_0_#334155] duration-500 shadow-none"
                 >
-                  <CardContent className="flex justify-center items-center p-0 ">
+                  <CardContent className="flex justify-center items-center p-0 aspect-w-1 aspect-h-1">
                     <img
-                      src={""}
+                      src={item.img}
                       alt="My Work Image"
-                      className="h-40 w-40 rounded-lg bg-primary"
+                      className="h-40 w-40 rounded-lg bg-primary object-cover"
                     />
                   </CardContent>
                   <CardFooter className="flex flex-col p-0 items-start space-y-1">
                     <h4 className="font-medium text-default-text">
-                      Sample Web
+                      {item.name}
                     </h4>
-                    <a href="" className="flex items-center space-x-2">
+                    <a href={item.href} className="flex items-center space-x-2">
                       <p>Demo</p>
                       <IoIosArrowRoundForward className="h-5 w-auto mt-1" />
                     </a>

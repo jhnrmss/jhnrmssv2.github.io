@@ -56,6 +56,7 @@ const NavigationBar = () => {
               <Button
                 variant={"outline"}
                 className="space-x-1  hover:text-white"
+                onClick={() => (window.location.href = "#contact")}
               >
                 <p>Contact</p>
                 <GoArrowUpRight className="h-4 mt-0.5 w-auto " />
