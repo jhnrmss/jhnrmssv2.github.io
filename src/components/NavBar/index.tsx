@@ -87,7 +87,7 @@ const NavigationBar = () => {
             {" "}
             <img
               alt="Application Main Logo"
-              src="./src/assets/main-logo.png"
+              src={mainLogo}
               className="h-5 w-auto"
             />
           </SheetTitle>
