@@ -9,29 +9,8 @@ import {
   SheetDescription,
 } from "../Sheet";
 import { FaBarsStaggered, FaXmark } from "react-icons/fa6";
-
-const navigation = [
-  {
-    name: "Home",
-    href: "#home",
-    icon: "",
-  },
-  {
-    name: "About",
-    href: "#about",
-    icon: "",
-  },
-  {
-    name: "Projects",
-    href: "#projects",
-    icon: "",
-  },
-  {
-    name: "Contact",
-    href: "#contact",
-    icon: "",
-  },
-];
+import { navigation } from "@/assets/constants";
+import { mainLogo } from "@/theme/images";
 
 const NavigationBar = () => {
   return (
@@ -56,7 +35,7 @@ const NavigationBar = () => {
             <div className="flex flex-shrink-0 items-center ">
               <img
                 alt="Application Main Logo"
-                src="./src/assets/main-logo.png"
+                src={mainLogo}
                 className="h-5 w-auto"
               />
             </div>

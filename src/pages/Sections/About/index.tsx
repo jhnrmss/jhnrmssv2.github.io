@@ -1,6 +1,6 @@
 import { moreInfo, skillSets } from "@/assets/constants";
-import meImage from "../../../assets/my-photo.jpg";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components";
+import { myImage } from "@/theme/images";
 
 export function About() {
   return (
@@ -18,7 +18,7 @@ export function About() {
             <div className="flex flex-col w-full lg:flex-row items-center gap-20 my-20">
               <div className="max-w-max mx-auto">
                 <img
-                  src={meImage}
+                  src={myImage}
                   alt="My Photo"
                   className="h-96 w-auto rounded-lg  opacity-80 hover:bg-none hover:opacity-100 duration-500 shadow"
                 />

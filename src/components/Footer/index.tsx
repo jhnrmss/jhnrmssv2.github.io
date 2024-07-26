@@ -1,5 +1,5 @@
 import { socials } from "@/assets/constants";
-import MainLogo from "../../assets/main-logo.png";
+import { mainLogo } from "@/theme/images";
 import { HiOutlineMail } from "react-icons/hi";
 
 const Footer = () => {
@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <div className="flex justify-center">
         <div className="flex flex-col justify-center items-center px-3 space-y-4 text-gray-600">
-          <img src={MainLogo} alt="My Photo" className="h-6 w-auto" />
+          <img src={mainLogo} alt="My Photo" className="h-6 w-auto" />
           <a
             href="mailto:johnromie37@gmail.com"
             className="inline-flex space-x-2 items-center text-sm text-default-text cursor-pointer hover:font-medium"

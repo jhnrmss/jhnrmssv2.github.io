@@ -1,7 +1,8 @@
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { AiOutlineDownload } from "react-icons/ai";
-import meImage from "../../../assets/me.jpg";
 import { Button } from "@/components";
+import { meImage } from "@/theme/images";
+import resume from "../../../assets/john-romie-cv.pdf";
 
 export function Home() {
   return (
@@ -32,17 +33,31 @@ export function Home() {
                 success of the overall product.
               </p>
               <div className="mt-6 flex items-center justify-center gap-x-6">
-                <Button className="inline-flex items-center space-x-1">
+                <Button
+                  className="inline-flex items-center space-x-1"
+                  onClick={() => (window.location.href = "#contact")}
+                >
                   <p> Contact Me</p>
                   <IoIosArrowRoundForward className="h-6 w-auto" />
                 </Button>
                 <Button
                   variant={"outline"}
                   className="inline-flex items-center space-x-2 "
+                  onClick={() =>
+                    document.getElementById("downloadResume")?.click()
+                  }
                 >
                   <p>My Resume</p>
                   <AiOutlineDownload className="h-4 w-auto" />
                 </Button>
+                <a
+                  id="downloadResume"
+                  href={resume}
+                  download="john-romie-cv"
+                  className="hidden"
+                >
+                  Download
+                </a>
               </div>
             </div>
           </div>
